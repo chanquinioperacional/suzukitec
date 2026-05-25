@@ -176,9 +176,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 .ll-orb2{position:absolute;width:200px;height:200px;border-radius:50%;background:rgba(184,150,110,.04);filter:blur(60px);bottom:-40px;left:-40px;pointer-events:none}
 
 .ll-logo{display:flex;align-items:center;gap:16px;margin-bottom:40px;position:relative;z-index:1}
-.ll-hex{width:56px;height:56px;position:relative}
-.ll-hex svg{width:56px;height:56px}
-.ll-hex-txt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:15px;font-weight:700;color:rgba(255,255,255,.95);letter-spacing:1.5px;text-shadow:0 1px 5px rgba(0,0,0,.9)}
+.ll-hex{width:64px;height:64px;position:relative}
+.ll-hex svg{width:64px;height:64px}
+.ll-hex-txt{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-family:'Cormorant Garamond',serif;font-size:12px;font-weight:700;color:rgba(255,255,255,.95);letter-spacing:1.5px}
 .ll-brand{display:flex;flex-direction:column;gap:3px}
 .ll-gfe{font-family:'Cormorant Garamond',serif;font-size:36px;font-weight:600;color:#fff;letter-spacing:4px;line-height:1}
 .ll-gfe-sub{font-size:10px;font-weight:400;letter-spacing:5px;text-transform:uppercase;color:rgba(199,183,170,.4);margin-top:4px}
@@ -1455,73 +1455,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
 <!-- SPLASH -->
 <div id="splash">
   <div class="sp-hex">
-    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" width="120" height="120">
-      <defs>
-        <linearGradient id="spG1" x1="10%" y1="0%" x2="90%" y2="100%">
-          <stop offset="0%"   stop-color="#F5E090"/>
-          <stop offset="18%"  stop-color="#D4A030"/>
-          <stop offset="42%"  stop-color="#A87020"/>
-          <stop offset="68%"  stop-color="#E0B850"/>
-          <stop offset="100%" stop-color="#5A3208"/>
-        </linearGradient>
-        <linearGradient id="spG2" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stop-color="#FFF8D0"/>
-          <stop offset="60%"  stop-color="#C89030"/>
-          <stop offset="100%" stop-color="#8A5C18"/>
-        </linearGradient>
-        <linearGradient id="spG3" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%"   stop-color="#200E02"/>
-          <stop offset="100%" stop-color="#6A4010"/>
-        </linearGradient>
-        <linearGradient id="spG4" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stop-color="#6A4010"/>
-          <stop offset="100%" stop-color="#1A0A02"/>
-        </linearGradient>
-        <linearGradient id="spGB" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%"   stop-color="#FFE870"/>
-          <stop offset="35%"  stop-color="#C89030"/>
-          <stop offset="70%"  stop-color="#E8C050"/>
-          <stop offset="100%" stop-color="#4A2808"/>
-        </linearGradient>
-        <radialGradient id="spSpec" cx="35%" cy="25%" r="40%">
-          <stop offset="0%"   stop-color="rgba(255,255,230,.6)"/>
-          <stop offset="100%" stop-color="rgba(255,255,230,0)"/>
-        </radialGradient>
-        <filter id="spDrop">
-          <feDropShadow dx="0" dy="5" stdDeviation="7" flood-color="#000" flood-opacity=".75"/>
-        </filter>
-        <filter id="spGlowF">
-          <feGaussianBlur stdDeviation="2" result="b"/>
-          <feColorMatrix in="b" values="1 .8 0 0 0 .8 .6 0 0 0 0 0 0 0 0 0 0 0 .7 0" result="g"/>
-          <feMerge><feMergeNode in="g"/><feMergeNode in="SourceGraphic"/></feMerge>
-        </filter>
-      </defs>
-
-      <!-- sombra projetada -->
-      <ellipse cx="60" cy="112" rx="30" ry="5" fill="rgba(0,0,0,.65)" filter="url(#spDrop)"/>
-      <!-- base escura deslocada -->
-      <polygon points="60,12 101,34 101,78 60,100 19,78 19,34" fill="#180A02" transform="translate(3,4)"/>
-      <!-- faceta esquerda sombra -->
-      <polygon points="60,12 19,34 19,78 60,100 60,95 24,76 24,36 60,17" fill="url(#spG3)"/>
-      <!-- faceta direita meia-luz -->
-      <polygon points="60,12 101,34 101,78 60,100 60,95 96,76 96,36 60,17" fill="url(#spG4)" opacity=".7"/>
-      <!-- face principal -->
-      <polygon points="60,12 101,34 101,78 60,100 19,78 19,34" fill="url(#spG1)"/>
-      <!-- faceta topo clara -->
-      <polygon points="60,12 101,34 82,44 60,24 38,44 19,34" fill="url(#spG2)" opacity=".7"/>
-      <!-- faceta base escura -->
-      <polygon points="60,100 101,78 82,68 60,80 38,68 19,78" fill="rgba(20,10,2,.65)"/>
-      <!-- chanfro interno -->
-      <polygon points="60,22 94,40 94,74 60,92 26,74 26,40" fill="none" stroke="rgba(255,210,80,.12)" stroke-width=".7"/>
-      <!-- brilho especular radial -->
-      <polygon points="60,12 101,34 101,78 60,100 19,78 19,34" fill="url(#spSpec)"/>
-      <!-- borda ouro fina -->
-      <polygon points="60,12 101,34 101,78 60,100 19,78 19,34" fill="none" stroke="url(#spGB)" stroke-width="1" filter="url(#spGlowF)"/>
-      <!-- ponto de luz quente -->
-      <circle cx="32" cy="34" r="4" fill="rgba(255,250,200,.3)"/>
-      <circle cx="32" cy="34" r="1.8" fill="rgba(255,255,230,.55)"/>
-      <!-- micro-reflexo no canto inferior -->
-      <circle cx="94" cy="74" r="2.5" fill="rgba(200,140,30,.2)"/>
+    <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" width="58" height="58">
+      <polygon points="60,12 101,34 101,78 60,100 19,78 19,34" fill="#0d1b2a"/>
+      <polygon points="60,12 101,34 101,78 60,100 19,78 19,34" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity=".7"/>
     </svg>
     <div class="sp-hex-letters">GFE</div>
   </div>
@@ -1541,51 +1477,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min
       <div class="ll-orb1"></div><div class="ll-orb2"></div>
       <div>
         <div class="ll-logo">
-          <div class="ll-hex" style="width:56px;height:56px">
-            <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" width="56" height="56">
-              <defs>
-                <linearGradient id="llG1" x1="10%" y1="0%" x2="90%" y2="100%">
-                  <stop offset="0%"   stop-color="#F5E090"/>
-                  <stop offset="18%"  stop-color="#D4A030"/>
-                  <stop offset="42%"  stop-color="#A87020"/>
-                  <stop offset="68%"  stop-color="#E0B850"/>
-                  <stop offset="100%" stop-color="#5A3208"/>
-                </linearGradient>
-                <linearGradient id="llG2" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%"   stop-color="#FFF8D0"/>
-                  <stop offset="100%" stop-color="#8A5C18"/>
-                </linearGradient>
-                <linearGradient id="llGB" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%"   stop-color="#FFE870"/>
-                  <stop offset="50%"  stop-color="#C89030"/>
-                  <stop offset="100%" stop-color="#4A2808"/>
-                </linearGradient>
-                <radialGradient id="llSpec" cx="35%" cy="25%" r="40%">
-                  <stop offset="0%"   stop-color="rgba(255,255,230,.55)"/>
-                  <stop offset="100%" stop-color="rgba(255,255,230,0)"/>
-                </radialGradient>
-              </defs>
-              <!-- base sombra -->
-              <polygon points="28,5 51,17 51,39 28,51 5,39 5,17" fill="#180A02" transform="translate(1.2,1.8)"/>
-              <!-- faceta esquerda -->
-              <polygon points="28,6 5,18 5,38 28,50 28,47 8,36 8,20 28,9" fill="rgba(18,8,1,.8)"/>
-              <!-- faceta direita -->
-              <polygon points="28,6 51,18 51,38 28,50 28,47 48,36 48,20 28,9" fill="rgba(40,20,5,.55)"/>
-              <!-- face principal -->
-              <polygon points="28,6 51,18 51,38 28,50 5,38 5,18" fill="url(#llG1)"/>
-              <!-- topo iluminado -->
-              <polygon points="28,6 51,18 39,23 28,14 17,23 5,18" fill="url(#llG2)" opacity=".7"/>
-              <!-- base escura -->
-              <polygon points="28,50 51,38 39,33 28,40 17,33 5,38" fill="rgba(15,7,1,.6)"/>
-              <!-- chanfro -->
-              <polygon points="28,11 46,21 46,35 28,45 10,35 10,21" fill="none" stroke="rgba(255,210,80,.1)" stroke-width=".5"/>
-              <!-- especular -->
-              <polygon points="28,6 51,18 51,38 28,50 5,38 5,18" fill="url(#llSpec)"/>
-              <!-- borda -->
-              <polygon points="28,6 51,18 51,38 28,50 5,38 5,18" fill="none" stroke="url(#llGB)" stroke-width=".8"/>
-              <!-- ponto de luz -->
-              <circle cx="13" cy="18" r="2.5" fill="rgba(255,250,200,.3)"/>
-              <circle cx="13" cy="18" r="1" fill="rgba(255,255,230,.55)"/>
+          <div class="ll-hex" style="width:64px;height:64px">
+            <svg viewBox="0 0 56 56" xmlns="http://www.w3.org/2000/svg" width="64" height="64">
+              <polygon points="28,6 51,18 51,38 28,50 5,38 5,18" fill="#0d1b2a"/>
+              <polygon points="28,6 51,18 51,38 28,50 5,38 5,18" fill="none" stroke="#C9A84C" stroke-width="1.5" opacity=".7"/>
             </svg>
             <div class="ll-hex-txt">GFE</div>
           </div>
